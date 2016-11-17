@@ -29,7 +29,7 @@ Now you know how to undo an edit!
 #### When would you use this?
 This is one of the most frequently used "rollback" commands.  Suppose you're working on a repo with someone else, and you accidentally edit a file that you shouldn't have (because you know you're going to get a merge conflict, and you'd rather avoid it altogether than have to deal with it). Instead of doing `edit > undo` a whole bunch of times, using this command will reset that file (or multiple fiels) back to the last commit.
 
-## Undo `git add`
+## Undo `add`
 Go ahead and make some changes to `rollback.md` again, but this time go ahead and **`add` the file to the stage**.  Now `rollback.md` should be green, yah?  Well the only way you would know that is if you typed `git status`.  Since you did, notice what it says above the green filename.  **Go ahead and type that.**
 
 Doing `git status` again should bring the file back to red.  Hooray!  We unstaged it.
