@@ -10,7 +10,7 @@ This will be in the form of a scavenger hunt.  Better than knowing _what to type
 2. Open `rollback.md` and use that file for all of the following directions.
 
 ## Undo edits
-Go ahead and make some changes to `rollback.md`.  Whatever you want.  It doesn't matter.  Add, delete, change, etc.
+Go ahead and make some changes to `rollback.md`.  Whatever you want.  It doesn't matter.  Add some text, delete some, change some, etc.
 
 Great! Now you've made some edits, but let's say you want to undo that.  Here's your hint: type `git status`.  Notice that `git` is giving you two hints:
 
@@ -22,29 +22,29 @@ Changes not staged for commit:
 
         modified:   rollback.md
 ```
-Yes, the commands have been replaced with `%%%%%%%%%%%%`.  **You need to type the command that will discard your changes.**
+Yes, the commands have been replaced with `%%%%%%%%%%%%`.  You need to **type the command that will discard your changes.**
 
-Now you know how to undo an edit!
+Now you know how to undo edits!
 
 #### When would you use this?
-This is one of the most frequently used "rollback" commands.  Suppose you're working on a repo with someone else, and you accidentally edit a file that you shouldn't have (because you know you're going to get a merge conflict, and you'd rather avoid it altogether than have to deal with it). Instead of doing `edit > undo` a whole bunch of times, using this command will reset that file (or multiple fiels) back to the last commit.
+This is one of the most frequently used "rollback" commands.  Suppose you're working on a repo with someone else, and you accidentally started editing a file that you shouldn't have (because you know you're going to get a merge conflict, and you'd rather avoid it altogether than have to deal with it). Instead of doing `edit > undo` a whole bunch of times, using this command will reset that file (or multiple files) back to the last commit to ensure it's exactly how it was before you started editing.
 
 ## Undo `add`
-Go ahead and make some changes to `rollback.md` again, but this time go ahead and **`add` the file to the stage**.  Now `rollback.md` should be green, yah?  Well the only way you would know that is if you typed `git status`.  Since you did, notice what it says above the green filename.  **Go ahead and type that.**
+Go ahead and make some changes to `rollback.md` again, but this time go ahead and **`add` the file to the stage**.  Now `rollback.md` is green, yah?  Well the only way you would know that is if you **type `git status`**.  Since you did, notice what it says above the green filename.  **Go ahead and type that.**
 
-Doing `git status` again should bring the file back to red.  Hooray!  We unstaged it.
+**Doing `git status` again** should bring the file back to red.  Hooray!  We unstaged it.
 
 #### When would you use this?
 Let's say you edit two files, and you accidentally did `git add .` (which adds both files to the stage), but you only meant to add one of the files (the other one is still broken).  You would want to remove the broken file from the stage with this command.
 
 ## Undo `commit`
-Where we just left off, `rollback.md` was red, which means it had changes but wasn't on the stage.  Go ahead and **`add` it to the stage and `commit` it.**
+Where we just left off, `rollback.md` is red, which means it has changes but isn't on the stage.  Go ahead and **`add` it to the stage and `commit` it.**
 
 Whoops! Let's say we didn't mean to take that snapshot.  How do we undo it?  Unfortunately, `git status` won't help you this time.  You'll have to rely on your next best friend: Google.
 
-Do a search for **git undo commit**.  The first result points to _Stackoverflow_, a great coding forum where people ask and answer questions.  The best part is that common questions get "upvoted", and so do the best answers.  Notice how many times this question has been upvoted: about 12000 times.  Also notice how many times the "best" answer has been upvoted: also about 12000 times.
+**Do a search for `git undo commit`**.  The first result points to _Stackoverflow_, a great coding forum where people ask and answer questions.  The best part is that common questions get "upvoted", and so do the best answers.  Notice how many times this question has been upvoted: about 12000 times.  Also notice how many times the "best" answer has been upvoted: also about 12000 times (you'll see a little :white_check_mark:).
 
-While the most upvoted answer is usually the first place to look, it never hurts to look beyond it (just like looking at more than just the first search result when using Google).  In this case, the second-most upvoted answer is what we want (the one with almost 8000 votes).  It has a pretty good explanation of how to do exactly what you want.
+While the most upvoted answer is usually the first place to look, it never hurts to look beyond it (just like looking at more than just the first search result when using Google).  In this case, the second-most upvoted answer is what we want (the one with almost 8000 votes).  It has a pretty good explanation of how to do exactly what we want.
 
 Read the first couple of paragraphs, but pay careful attention to this part (note: index means staging area)
 
@@ -53,7 +53,7 @@ Read the first couple of paragraphs, but pay careful attention to this part (not
 
 **Type the command that will do that.**
 
-Yay! You just un-commited.  But using `git status` shows us the green file which means we're right back to where we were before we made the commit.
+Yay! You just un-commited.  **Using `git status`** shows us the green file which means we're right back to where we were before we made the commit.
 
 #### When would you use this?
 If you want to leave the files in the staging area, that means you don't need to make any edits.  So this only really applies to changing your commit message.  All it will do is undo typing `git commit -m "blah blah blah"`.
@@ -88,9 +88,12 @@ Let's go ahead and **add and commit it again**. We're about to destroy the `comm
 #### When would you use this?
 This is a very dangerous command, so use it sparingly.  It's much safer to rollback to a previous commit.
 
-## Rollback to a previous commit
-Alas, the moment has come to learn how to rollback.  It's time to modify our Google search. Try this: **git rollback to previous commit**. The first result points to, yet again, _Stackoverflow_.  Become best friends with _Stackoverflow_.
+## Revert to a previous commit
+Alas, the moment has come to learn how to revert.  It's time to modify our Google search. Try this: **git rollback to previous commit**. The first result points to, yet again, _Stackoverflow_.  Become best friends with _Stackoverflow_.
 
 This time, the most upvoted answer (with the green checkmark) is the one we want.
 
-Let's remove the training wheels completely. Read the post, and do your best.  You got this. :thumbsup:
+Let's remove the training wheels completely. Read the post, and do your best to understand `git revert`.  Try things, mess them up, and make sure you read for understanding.  You may get merge conflicts with yourself.  Remember, `git status` is your best friend. You got this. :thumbsup:
+
+#### When would you use this?
+If you're wondering how to undo a `push`, it's not possible.  And so it's dangerous to "undo" your changes locally if you already pushed them (because a collaborator could pull them).  So it's easier to revert (and then push again), because you're not trying to "re-write" history, you're just bringing old code to the present.
