@@ -89,11 +89,13 @@ Let's go ahead and **add and commit it again**. We're about to destroy the `comm
 This is a very dangerous command, so use it sparingly.  It's much safer to rollback to a previous commit.
 
 ## Revert to a previous commit
-Alas, the moment has come to learn how to revert.  It's time to modify our Google search. Try this: **git rollback to previous commit**. The first result points to, yet again, _Stackoverflow_.  Become best friends with _Stackoverflow_.
+Alas, the moment has come to learn how to revert.  It's time to modify our Google search. Try this: **git rollback to previous commit**. The first two resources are great:
 
-This time, the most upvoted answer (with the green checkmark) is the one we want.
+1) Atlassian Git Tutorial
+2) Yet again, _Stackoverflow_.  Become best friends with _Stackoverflow_.
 
-Let's remove the training wheels completely. Read the post, and do your best to understand `git revert`.  Try things, mess them up, and make sure you read for understanding.  You may get merge conflicts with yourself.  Remember, `git status` is your best friend. You got this. :thumbsup:
+Read the first one.
 
-#### When would you use this?
-If you're wondering how to undo a `push`, it's not possible.  And so it's dangerous to "undo" your changes locally if you already pushed them (because a collaborator could pull them).  So it's easier to revert (and then push again), because you're not trying to "re-write" history, you're just bringing old code to the present.
+Then read the second one on Stackoverflow, but this time, the most upvoted answer (with the green checkmark) is the one we want.
+
+Let's remove the training wheels completely. Do your best to understand `git revert`, and if you want, `git reset` (both with the proper syntax).  Try things, mess them up, and make sure you read for understanding.  You may get merge conflicts with yourself.  Remember, `git status` is your best friend. You got this. :thumbsup:
