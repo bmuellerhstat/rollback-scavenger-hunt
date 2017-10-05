@@ -94,8 +94,8 @@ Alas, the moment has come to learn how to revert.  It's time to modify our Googl
 1) Atlassian Git Tutorial
 2) Yet again, _Stackoverflow_.  Become best friends with _Stackoverflow_.
 
-Read the first one.
+Read the Atlassian Git Tutorial.
 
-Then read the second one on Stackoverflow, but this time, the most upvoted answer (with the green checkmark) is the one we want.
+Then read the post on Stackoverflow, but this time, the most upvoted answer (with the green checkmark) is the one we want.
 
 Let's remove the training wheels completely. Do your best to understand `git revert`, and if you want, `git reset` (both with the proper syntax).  Try things, mess them up, and make sure you read for understanding.  You may get merge conflicts with yourself.  Remember, `git status` is your best friend. You got this. :thumbsup:
