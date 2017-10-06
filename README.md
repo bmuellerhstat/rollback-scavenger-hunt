@@ -26,7 +26,7 @@ Changes not staged for commit:
 
         modified:   rollback.md
 ```
-Yes, the commands have been replaced with `%%%%%%%%%%%%`.  You need to **type the command that will discard your changes.**  NOTE: you do NOT need to type the `...`
+Yes, the commands have been replaced with `%%%%%%%%%%%%`.  You need to **type the command that will discard your changes.**  NOTE: you do NOT need to type the `...` or the `< >` symbols.
 
 Now you know how to undo edits!
 
