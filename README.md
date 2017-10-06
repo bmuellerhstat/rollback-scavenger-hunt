@@ -46,7 +46,7 @@ Where we just left off, `rollback.md` is red, which means it has changes but isn
 
 Whoops! Let's say we didn't mean to take that snapshot.  How do we undo it?  Unfortunately, `git status` won't help you this time.  You'll have to rely on your next best friend: Google.
 
-**Do a search for `git undo commit`**.  The first result points to _Stackoverflow_, a great coding forum where people ask and answer questions.  The best part is that common questions get "upvoted", and so do the best answers.  Notice how many times this question has been upvoted: about 12000 times.  Also notice how many times the "best" answer has been upvoted: also about 12000 times (you'll see a little :white_check_mark:).
+**Do a search for `git undo commit`**.  The first result points to _Stackoverflow_, a great coding forum where people ask and answer questions.  The best part is that common questions get "upvoted", and so do the best answers.  Notice how many times this question has been upvoted: about 15000 times.  Also notice how many times the "best" answer has been upvoted: over 16000 times (you'll see a little :white_check_mark:).
 
 While the most upvoted answer is usually the first place to look, it never hurts to look beyond it (just like looking at more than just the first search result when using Google).  In this case, the second-most upvoted answer is what we want (the one with almost 8000 votes).  It has a pretty good explanation of how to do exactly what we want.
 
