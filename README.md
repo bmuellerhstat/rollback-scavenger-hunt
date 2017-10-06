@@ -6,8 +6,12 @@ This will be in the form of a scavenger hunt.  Better than knowing _what to type
 
 ### How to begin
 
-1. Fork and clone this repository.
-2. Open `rollback.md` and use that file for all of the following directions.
+1. In the top-right corner of this repository, you should see a **Fork** button.  Click that.
+2. At the top you should now see **yourUserName/rollback-scavenger-hunt**. If you don't, try step 1 again.
+3. Click the green **Clone or download** button. Make sure it says SSH (not HTTPS), then click the clipboard icon to copy.
+4. In your cloud9 command line, at `~/workspace`, type `git clone URL`, where `URL` is the long link you just copied. You can just paste it in there.  Make sure it says `git clone git@github.com:YOURUSERNAME/rollback-scavenger-hunt.git` before you press enter.
+5. Go ahead and `cd` into your newly cloned repo!
+6. Open `rollback.md` and use that file for all of the following directions.
 
 ## Undo edits
 Go ahead and make some changes to `rollback.md`.  Whatever you want.  It doesn't matter.  Add some text, delete some, change some, etc.
