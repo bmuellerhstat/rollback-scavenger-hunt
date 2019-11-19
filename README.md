@@ -2,21 +2,21 @@
 
 Objective: In this repository, you will learn how to use the power of **Git** to _undo_ any changes you've made.
 
-This will be in the form of a scavenger hunt.  Better than knowing _what to type_ is knowing **where to look** for _what to type_.
+This will be in the form of a scavenger hunt. Better than knowing _what to type_ is knowing **where to look** for _what to type_.
 
 ### How to begin
 
-1. In the top-right corner of this repository, you should see a **Fork** button.  Click that.
+1. In the top-right corner of this repository, you should see a **Fork** button. Click that.
 2. At the top you should now see **yourUserName/rollback-scavenger-hunt**. If you don't, try step 1 again.
 3. Click the green **Clone or download** button. Make sure it says SSH (not HTTPS), then click the clipboard icon to copy.
-4. In your cloud9 command line, at `~/workspace`, type `git clone URL`, where `URL` is the long link you just copied. You can just paste it in there.  Make sure it says `git clone git@github.com:YOURUSERNAME/rollback-scavenger-hunt.git` before you press enter.
+4. In your IDE command line, at `~/github-learning/`, type `git clone URL`, where `URL` is the long link you just copied. You can just paste it in there. Make sure it says `git clone git@github.com:YOURUSERNAME/rollback-scavenger-hunt.git` before you press enter.
 5. Go ahead and `cd` into your newly cloned repo!
-6. Open `rollback.md` and use that file for all of the following directions.
+6. Open `rollback.md` and use that file for all of the following directions. It is **extremely important** that you read and follow directions **VERY** carefully!
 
 ## Undo edits
-Go ahead and make some changes to `rollback.md`.  Whatever you want.  It doesn't matter.  Add some text, delete some, change some, etc.
+Go ahead and make some changes to `rollback.md`. Whatever you want. It doesn't matter. Add some text, delete some, change some, etc.
 
-Great! Now you've made some edits, but let's say you want to undo that.  Here's your hint: type `git status`.  Notice that `git` is giving you two hints:
+Great! Now you've made some edits, but let's say you want to undo that. Here's your hint: type `git status`.  Notice that `git` is giving you two hints:
 
 ```
 On branch master
@@ -34,21 +34,21 @@ Now you know how to undo edits!
 This is one of the most frequently used "rollback" commands.  Suppose you're working on a repo with someone else, and you accidentally started editing a file that you shouldn't have (because you know you're going to get a merge conflict, and you'd rather avoid it altogether than have to deal with it). Instead of doing `edit > undo` a whole bunch of times, using this command will reset that file (or multiple files) back to the last commit to ensure it's exactly how it was before you started editing.
 
 ## Undo `add`
-Go ahead and make some changes to `rollback.md` again, but this time go ahead and **`add` the file to the stage**.  Now `rollback.md` is green, yah?  Well the only way you would know that is if you **type `git status`**.  Since you did, notice what it says above the green filename.  **Go ahead and type that.**
+Go ahead and make some changes to `rollback.md` again, but this time go ahead and **`add` the file to the stage**.  Now `rollback.md` is green, yah?  Well the only way you would know that is if you **type `git status`**. Since you did, notice what it says above the green filename.  **Go ahead and type that.**
 
 **Doing `git status` again** should bring the file back to red.  Hooray!  We unstaged it.
 
 #### When would you use this?
-Let's say you edit two files, and you accidentally did `git add .` (which adds both files to the stage), but you only meant to add one of the files (the other one is still broken).  You would want to remove the broken file from the stage with this command.
+Let's say you edit two files, and you accidentally did `git add .` (which adds both files to the stage), but you only meant to add one of the files (the other one is still broken). You would want to remove the broken file from the stage with this command.
 
 ## Undo `commit`
-Where we just left off, `rollback.md` is red, which means it has changes but isn't on the stage.  Go ahead and **`add` it to the stage and `commit` it.**
+Where we just left off, `rollback.md` is red, which means it has changes but isn't on the stage. Go ahead and **`add` it to the stage and `commit` it.**
 
 Whoops! Let's say we didn't mean to take that snapshot.  How do we undo it?  Unfortunately, `git status` won't help you this time.  You'll have to rely on your next best friend: Google.
 
-**Do a search for `git undo commit`**.  The first result points to _Stackoverflow_, a great coding forum where people ask and answer questions.  The best part about is that common questions get "upvoted", and so do the best answers.  Notice how many times this question has been upvoted: about 18000 times.  If you scroll down a little bit, you'll see answers.  (NOTE: the link MIGHT take you to Page 2, highlighted in orange. If so, please click on Page 1). Also notice how many times the "best" answer has been upvoted: over 19000 times (you'll see a little :white_check_mark:).
+**Do a search for `git undo commit`**.  One of the first result points to _Stackoverflow_, a great coding forum where people ask and answer questions. The best part about is that common questions get "upvoted", and so do the best answers. Notice how many times this question has been upvoted: over 20,000 times.  If you scroll down a little bit, you'll see answers.  (NOTE: the link MIGHT take you to Page 2, highlighted in orange. If so, please click on Page 1). Also notice how many times the "best" answer has been upvoted: almost 22,000 times (you'll see a little :white_check_mark:).
 
-While the most upvoted answer is usually the first place to look, it never hurts to look beyond it (just like looking at more than just the first search result when using Google).  In this case, the second-most upvoted answer is what we want (the one with over 9000 votes).  It has a pretty good explanation of how to do exactly what we want.
+While the most upvoted answer is usually the first place to look, it never hurts to look beyond it (just like looking at more than just the first search result when using Google).  In this case, the second-most upvoted answer is what we want (the one with over 10,000 votes).  It has a pretty good explanation of how to do exactly what we want.
 
 Read the first couple of paragraphs, but pay careful attention to this part (note: index means staging area)
 
@@ -93,13 +93,4 @@ Let's go ahead and **add and commit it again**. We're about to destroy the `comm
 This is a very dangerous command, so use it sparingly.  It's much safer to rollback to a previous commit.
 
 ## Revert to a previous commit
-Alas, the moment has come to learn how to revert.  It's time to modify our Google search. Try this: **git rollback to previous commit**. The first two resources are great:
-
-1) Atlassian Git Tutorial
-2) Yet again, _Stackoverflow_.  Become best friends with _Stackoverflow_.
-
-Read the Atlassian Git Tutorial.
-
-Then read the post on Stackoverflow, but this time, the most upvoted answer (with the green checkmark) is the one we want.
-
-Let's remove the training wheels completely. Do your best to understand `git revert`, and if you want, `git reset` (both with the proper syntax).  Try things, mess them up, and make sure you read for understanding.  You may get merge conflicts with yourself.  Remember, `git status` is your best friend. You got this. :thumbsup:
+At this point, you've already seen `git revert` in an earlier lesson. But if you want to, you can search for: **git rollback to previous commit** and learn even more. The point is to try things, mess them up, and make sure you read for understanding.  You may get merge conflicts with yourself.  Remember, `git status` is your best friend. You got this. :thumbsup:
